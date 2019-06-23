@@ -1,0 +1,27 @@
+<!--pages/post/post.wxml-->
+<import src="post-item/post-item-template.wxml"/>
+<view>
+  <!-- 顶部轮播图 -->
+  <swiper autoplay='true' indicator-dots='true' interval='3000' indicator-active-color='#fff' catchtap='onSwiperTap'>
+    <swiper-item>
+      <image  src="/images/wx.png" data-postId="3"></image>
+    </swiper-item>
+
+     <swiper-item>
+      <image  src="/images/vr.png" data-postId="4"></image>
+    </swiper-item>
+
+     <swiper-item>
+      <image  src="/images/iqiyi.png" data-postId="5"></image>
+    </swiper-item>
+  </swiper>
+
+  <!--新闻预览页面-->
+  <block class="post-container" wx:for="{{postList}}" wx:key="{{item.postId}}">
+  <!--使用template template的好处在于 多个相同页面的时候 可以直接使用template定义好的内容 而不需要写冗余的代码-->
+    <view catchtap='onPostTap' data-postId="{{item.postId}}">
+      <!--由于template在编译以后其实是不会有这个节点的 所以用view包裹起来 然后写点击事件-->
+      <template is="post-item" data="{{item}}" />
+    </view>
+  </block>
+</view>

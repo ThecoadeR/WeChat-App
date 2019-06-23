@@ -1,0 +1,13 @@
+@import "/pages/movies/movie-item/movie-item.wxss";
+
+.movie-gird-container{
+  float: left;
+  margin-bottom: 40rpx;
+}
+
+.container{
+  margin: 40rpx 0 40rpx 6rpx;
+  /** 设置一个高度 用于触发scoll-view的上拉加载更多数据的事件 **/
+  /* height: 1300rpx; */
+}
+

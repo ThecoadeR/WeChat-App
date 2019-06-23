@@ -1,0 +1,27 @@
+<!--pages/movies/movies.wxml-->
+<!--引入movie-list-template模板-->
+<import src="/pages/movies/movie-list/movie-list.wxml" />
+<import src="/pages/movies/movie-gird/movie-gird.wxml" />
+<view class="search">
+  <icon type='search' size="13" color="#405f80" class='search-img'></icon>
+  <input type='text' placeholder='输入电影名进行搜索' placeholder-class='placeholder' bindfocus='onBindFocus' bindconfirm='onBindConfirm' value="{{searchValue}}" />
+  <image src="/images/icon/xx.png" class="close-icon" bindtap='onCancelTap' wx:if="{{showSearch}}"></image>
+</view>
+<view class="movies-container" wx:if="{{showMovie}}">
+  <view class="movies-list-template">
+    <template is="movie-list-template" data="{{...inTheaters,city:city}}" />
+  </view>
+
+  <view class="movies-list-template">
+    <template is="movie-list-template" data="{{...comingSoon}}" />
+  </view>
+
+  <view class="movies-list-template">
+    <template is="movie-list-template" data="{{...top}}" />
+  </view>
+</view>
+
+  <view class="search-result" wx:if="{{showSearch}}">
+  <template is="movie-gird-template" data="{{...searchResult}}" />
+
+</view>

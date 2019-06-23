@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/post/post",
+    "pages/post/post-detail/post-detail",
+    "pages/movies/movies",
+    "pages/movies/movie-more/movie-more",
+    "pages/movies/movie-detail/movie-detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#405f80"
+  }
+}
+

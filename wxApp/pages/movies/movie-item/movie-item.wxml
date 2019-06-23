@@ -1,0 +1,10 @@
+<!--引入电影评分movie-star模板-->
+<import src="/pages/movies/movie-stars/stars.wxml" />
+
+<template name="movie-item-template">
+  <view class="movie-item-container" bindtap='onMovieTap' data-movieId="{{movieId}}" >
+    <image class="movie-img" src="{{coverageUrl}}"></image>
+    <text class="movie-title">{{title}}</text>
+    <template is="movie-stars-template"  data="{{stars:stars,score:average}}"/>
+  </view>
+</template>

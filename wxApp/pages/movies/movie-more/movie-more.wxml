@@ -1,0 +1,6 @@
+<!--pages/movies/movie-more/movie-more.wxml-->
+<import src="/pages/movies/movie-gird/movie-gird.wxml" />
+<view>
+  <template is="movie-gird-template" data="{{movies}}" />
+</view>
+

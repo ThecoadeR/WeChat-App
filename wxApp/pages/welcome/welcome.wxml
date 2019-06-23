@@ -1,0 +1,12 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <!-- <image class="user-avatar" src='/images/avatar/1.png'></image>
+  <text class="user-name">Hello</text> -->
+  <view class="user-avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="user-name"></open-data>
+  <view class="desc-container" bindtap='onTap' animation="{{animation}}">
+    <text class="app-desc">点击进入小程序</text>
+  </view>
+</view>

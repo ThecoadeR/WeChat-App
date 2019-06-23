@@ -1,0 +1,46 @@
+@import "/pages/movies/movie-item/movie-item.wxss";
+
+.movie-list-container{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/** 让页面所有元素都左右居中 **/
+.inner-container{
+  margin: 0 auto 20rpx;
+}
+
+
+.container-header{
+  padding: 30rpx 20rpx 22rpx;
+  /*让容器内部的元素为flex布局 同时元素自动分布在盒子模型的两端 不过有可能造成元素不是水平居中对齐的bug 可以设置一下对应元素的margin来修复*/
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between */
+}
+
+.slogan{
+  font-size: 24rpx;
+}
+
+.more{
+  float:right;
+}
+
+.more-text{
+  margin-right: 10rpx;
+  vertical-align: middle;
+  color: #1f4ba5;
+}
+
+.more-img{
+  width: 12rpx;
+  height: 12rpx;
+  vertical-align: middle;
+}
+
+.template-container{
+  display: flex;
+  flex-direction: row
+}
